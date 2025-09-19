@@ -1,6 +1,6 @@
 function HeroSection() {
   return (
-    <section className="rounded-3xl bg-neutral-900 ring-1 ring-neutral-800/80 p-10">
+    <section className=" bg-neutral-900  ring-neutral-800/80 p-10 rounded-tr-4xl">
       <p className="text-neutral-300">
         Hello, I’m <span className="text-emerald-400">Lead Data Scientist</span>
       </p>

@@ -7,8 +7,8 @@ interface ProfileCardProps {
 function ProfileCard({ name, title, avatarUrl }: ProfileCardProps) {
   return (
     <div className=" lg:sticky lg:top-12 max-h-min">
-      <div className="rounded-3xl bg-neutral-900 ring-1 ring-neutral-800/80  w-full overflow-hidden  max-h-min">
-        <div className="p-6">
+      <div className="rounded-3xl rounded-tr-none bg-neutral-900 ring-1 ring-neutral-800/80  w-full overflow-hidden  max-h-min">
+        <div className="p-7">
           <div className="rounded-2xl overflow-hidden bg-neutral-800 h-72 grid place-items-center">
             {avatarUrl ? (
               <img
