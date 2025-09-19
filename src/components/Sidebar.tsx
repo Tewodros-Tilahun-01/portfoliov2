@@ -1,8 +1,8 @@
 function Sidebar() {
   const items = ["menu", "settings", "user", "chart", "bolt", "layers"];
   return (
-    <aside className="sticky top-6 self-start h-full">
-      <div className="flex flex-col gap-4 rounded-full bg-neutral-800/80 p-3 shadow-lg ring-1 ring-neutral-700 w-full">
+    <aside className="hidden max-w-18 md:flex justify-center max-h-screen items-start pt-12">
+      <div className="flex flex-col gap-4 rounded-full bg-neutral-800/80 p-3 shadow-lg ring-1 ring-neutral-700 max-h-min">
         {items.map((k) => (
           <button
             key={k}

@@ -6,9 +6,9 @@ interface ProfileCardProps {
 
 function ProfileCard({ name, title, avatarUrl }: ProfileCardProps) {
   return (
-    <div className="rounded-3xl bg-neutral-900 ring-1 ring-neutral-800/80 max-w-sm w-full overflow-hidden">
+    <div className="rounded-3xl bg-neutral-900 ring-1 ring-neutral-800/80  w-full overflow-hidden ">
       <div className="p-6">
-        <div className="rounded-2xl overflow-hidden bg-neutral-800 aspect-[3/3.6] grid place-items-center">
+        <div className="rounded-2xl overflow-hidden bg-neutral-800 h-80 grid place-items-center">
           {avatarUrl ? (
             <img
               src={avatarUrl}
