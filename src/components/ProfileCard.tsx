@@ -7,9 +7,9 @@ interface ProfileCardProps {
 function ProfileCard({ name, title, avatarUrl }: ProfileCardProps) {
   return (
     <div className=" lg:sticky lg:top-12 max-h-min">
-      <div className="rounded-3xl rounded-tr-none bg-neutral-900 ring-1 ring-neutral-800/80  w-full overflow-hidden  max-h-min">
+      <div className="rounded-3xl rounded-tr-none bg-secondary ring-1 ring-primary w-full overflow-hidden max-h-min">
         <div className="p-7">
-          <div className="rounded-2xl overflow-hidden bg-neutral-800 h-72 grid place-items-center">
+          <div className="rounded-2xl overflow-hidden bg-tertiary h-72 grid place-items-center">
             {avatarUrl ? (
               <img
                 src={avatarUrl}
@@ -17,12 +17,12 @@ function ProfileCard({ name, title, avatarUrl }: ProfileCardProps) {
                 className="h-full w-full object-cover"
               />
             ) : (
-              <div className="text-neutral-500">Avatar</div>
+              <div className="text-tertiary">Avatar</div>
             )}
           </div>
 
           <div className="mt-8 text-center">
-            <div className="text-xs tracking-[0.2em] text-neutral-400">
+            <div className="text-xs tracking-[0.2em] text-tertiary">
               DATA ARCHITECT
             </div>
             <h3 className="mt-3 text-2xl font-semibold">{name}</h3>
@@ -31,7 +31,7 @@ function ProfileCard({ name, title, avatarUrl }: ProfileCardProps) {
               {Array.from({ length: 4 }).map((_, i) => (
                 <button
                   key={i}
-                  className="size-10 grid place-items-center rounded-full bg-neutral-800 text-neutral-300 hover:text-white hover:bg-neutral-700"
+                  className="size-10 grid place-items-center rounded-full bg-tertiary text-secondary hover:text-primary hover-bg"
                 >
                   <span className="text-lg">in</span>
                 </button>
@@ -40,17 +40,11 @@ function ProfileCard({ name, title, avatarUrl }: ProfileCardProps) {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 divide-x divide-neutral-800">
-          <a
-            className="p-5 text-center hover:bg-neutral-800/60 transition-colors"
-            href="#"
-          >
+        <div className="grid grid-cols-2 divide-x divide-primary">
+          <a className="p-5 text-center hover-bg transition-colors" href="#">
             Download CV
           </a>
-          <a
-            className="p-5 text-center hover:bg-neutral-800/60 transition-colors"
-            href="#"
-          >
+          <a className="p-5 text-center hover-bg transition-colors" href="#">
             Contact Me
           </a>
         </div>

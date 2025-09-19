@@ -4,12 +4,16 @@ import HeroSection from "./HeroSection";
 function MainSection() {
   return (
     <div className="flex flex-col w-full ">
-      <HeroSection />
-      <StatsRow />
-      <div className="mb-8"></div>
+      <div className="pb-8 bg-secondary rounded-tr-4xl">
+        <HeroSection />
+        <StatsRow />
+      </div>
 
-      <HeroSection />
-      <StatsRow />
+      <div className="mb-8"></div>
+      <div className="pb-8 bg-secondary rounded-tr-4xl">
+        <HeroSection />
+        <StatsRow />
+      </div>
     </div>
   );
 }

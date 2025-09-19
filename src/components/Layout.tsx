@@ -6,7 +6,7 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="min-h-dvh relative text-neutral-100">
+    <div className="min-h-dvh relative text-primary">
       <video
         className="fixed top-0 left-0 w-full h-full opacity-100  object-cover"
         autoPlay
