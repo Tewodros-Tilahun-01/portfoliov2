@@ -1,7 +1,6 @@
 import Layout from "../components/Layout";
 import Sidebar from "../components/Sidebar";
 import ProfileCard from "../components/ProfileCard";
-
 import MainSection from "../sections/MainSection";
 
 function Home() {
