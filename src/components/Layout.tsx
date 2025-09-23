@@ -18,7 +18,7 @@ export default function Layout({ children }: LayoutProps) {
         Your browser does not support the video tag.
       </video>
       {/* <div className="absolute inset-0 bg-neutral-900/60"></div> */}
-      <div className="relative z-10 mx-auto px-2 sm:px-12 md:px-2 lg:px-2 py-12 pb-8 sm:container md:container lg:max-w-full">
+      <div className="relative z-10 mx-auto  sm:px-12 md:px-2 lg:px-2 md:py-12 pb-8 sm:container md:container lg:max-w-full">
         {children}
       </div>
     </div>
