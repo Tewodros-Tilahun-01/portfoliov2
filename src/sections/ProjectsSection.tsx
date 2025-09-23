@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { motion } from "framer-motion";
 import { Badge } from "../components/ui/badge";
 import { Card } from "../components/ui/card";
 import { Github, ExternalLink } from "lucide-react";
@@ -113,48 +114,66 @@ function ActionLink({
   );
 }
 
-function ProjectCard({ project }: { project: Project }) {
+function ProjectCard({
+  project,
+  aspectRatio,
+}: {
+  project: Project;
+  aspectRatio?: string;
+}) {
+  // Default height for first column
+  const baseHeight = 224; // h-56 = 224px
+  // Second column height is 30% bigger
+  const imageHeight = aspectRatio === "second" ? baseHeight * 1.3 : baseHeight;
   return (
-    <Card className="p-3  hover:shadow-lg transition-shadow">
-      <div className="relative">
-        {project.image ? (
-          <img
-            src={project.image}
-            alt={project.title}
-            className="h-56 w-full object-cover rounded-xl"
-          />
-        ) : (
-          <ProjectImage title={project.title} />
-        )}
-        <div className="absolute bottom-3 left-3 flex flex-wrap gap-2">
-          {project.primaryTag.map((tag) => (
-            <Badge
-              key={tag}
-              className=" bg-tertiary/90 text-secondary border border-secondary/30 px-2 py-1 text-[10px]"
-            >
-              {tag}
-            </Badge>
-          ))}
+    <motion.div
+      initial={{ opacity: 0, scale: 0, x: 0, y: -100 }}
+      animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeIn" }}
+    >
+      <Card className="p-3 hover:shadow-lg transition-shadow ">
+        <div className="relative">
+          {project.image ? (
+            <img
+              src={project.image}
+              alt={project.title}
+              style={{ height: imageHeight + "px" }}
+              className="w-full object-cover rounded-xl"
+            />
+          ) : (
+            <ProjectImage title={project.title} />
+          )}
         </div>
-      </div>
-      <div className="px-2 py-4">
-        <div className="text-lg font-semibold text-primary leading-snug">
-          {project.title}
+
+        <div className="px-2 py-4">
+          <div className=" flex flex-wrap gap-2 mb-4">
+            {project.primaryTag.map((tag) => (
+              <Badge
+                key={tag}
+                className=" text-secondary  px-2 py-1 text-[10px]"
+              >
+                {tag}
+              </Badge>
+            ))}
+          </div>
+          <div className="text-lg font-semibold text-primary leading-snug">
+            {project.title}
+          </div>
+          <div className="mt-3 flex items-center gap-3">
+            <ActionLink
+              href={project.links?.github}
+              label="GitHub"
+              icon={<Github className="size-4" />}
+            />
+            <ActionLink
+              href={project.links?.live}
+              label="Live"
+              icon={<ExternalLink className="size-4" />}
+            />
+          </div>
         </div>
-        <div className="mt-3 flex items-center gap-3">
-          <ActionLink
-            href={project.links?.github}
-            label="GitHub"
-            icon={<Github className="size-4" />}
-          />
-          <ActionLink
-            href={project.links?.live}
-            label="Live"
-            icon={<ExternalLink className="size-4" />}
-          />
-        </div>
-      </div>
-    </Card>
+      </Card>
+    </motion.div>
   );
 }
 
@@ -189,9 +208,17 @@ export default function ProjectsSection() {
         ))}
       </div>
 
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-        {filtered.map((p) => (
-          <ProjectCard key={p.id} project={p} />
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2  gap-x-10 gap-y-8">
+        {filtered.map((p, i) => (
+          <div
+            key={p.id}
+            className={[i % 2 === 1 ? "md:row-span-6" : ""].join(" ")}
+          >
+            <ProjectCard
+              project={p}
+              aspectRatio={i % 2 === 1 ? "second" : undefined}
+            />
+          </div>
         ))}
       </div>
     </section>
