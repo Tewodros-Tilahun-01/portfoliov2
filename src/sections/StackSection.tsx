@@ -173,12 +173,12 @@ function SectionBadge({ children }: { children: string }) {
 
 function DotsProgress({
   percent,
-  total = 12,
+  total = 10,
 }: {
   percent: number;
   total?: number;
 }) {
-  const filled = Math.round((percent / 100) * total);
+  const filled = Math.floor((percent / 100) * total);
   const dots = Array.from({ length: total }, (_, i) => i < filled);
   return (
     <div className="flex items-center gap-2">
@@ -197,14 +197,14 @@ function DotsProgress({
 
 function LanguageRow({ name, percent, flag }: Language) {
   return (
-    <div className="flex items-center justify-between gap-4 py-3">
+    <div className="flex items-center justify-between gap-4 py-3 w-full">
       <div className="flex items-center gap-4">
         <div className="grid place-items-center size-10 rounded-xl  text-lg">
           <span aria-hidden>{flag}</span>
         </div>
         <div className="text-primary">{name}</div>
       </div>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center md:gap-2">
         <DotsProgress percent={percent} />
         <div className="w-10 text-right text-secondary text-sm">{percent}%</div>
       </div>
