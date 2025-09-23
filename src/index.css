@@ -13,6 +13,7 @@
   --accent-bg: #d1fae5;
   --border-primary: #e2e8f0;
   --border-secondary: #cbd5e1;
+  --border-custom: #e2e8f0; /* Fallback for light theme, adjust if needed */
   --hover-bg: #f1f5f9;
   --ring-color: #e2e8f0;
 }
@@ -30,6 +31,7 @@
   --accent-bg: #064e3b;
   --border-primary: #334155;
   --border-secondary: #475569;
+  --border-custom: rgba(255, 255, 255, 0.12); /* Custom color for dark theme */
   --hover-bg: #334155;
   --ring-color: #334155;
 }
@@ -66,6 +68,9 @@
 }
 .border-secondary {
   border-color: var(--border-secondary);
+}
+.border-custom {
+  border-color: var(--border-custom);
 }
 .hover-bg:hover {
   background-color: var(--hover-bg);
