@@ -24,8 +24,9 @@ const PROJECTS: Project[] = [
     tags: ["frontend"],
     primaryTag: ["react"],
     links: {
-      github: "https://github.com/yourusername/class-scheduling-software",
-      live: "https://class-scheduling-software.example.com",
+      github:
+        "https://github.com/Tewodros-Tilahun-01/class-scheduling-management-system",
+      live: "https://github.com/Tewodros-Tilahun-01/class-scheduling-management-system",
     },
   },
 
@@ -36,8 +37,8 @@ const PROJECTS: Project[] = [
     tags: ["fullstack"],
     primaryTag: ["react", "express", "mongodb"],
     links: {
-      github: "https://github.com/yourusername/cinaima-films",
-      live: "https://cinaima-films.example.com",
+      github: "https://github.com/Tewodros-Tilahun-01/cinema-movie",
+      live: "https://tcinema.netlify.app/",
     },
   },
   {
@@ -47,8 +48,8 @@ const PROJECTS: Project[] = [
     tags: ["fullstack"],
     primaryTag: ["react", "express", "mongodb"],
     links: {
-      github: "https://github.com/yourusername/appointment-scheduling-software",
-      live: "https://appointment-scheduling-software.example.com",
+      live: "https://ketero-v1.vercel.app",
+      github: "https://github.com/Tewodros-Tilahun-01/ketero",
     },
   },
 ];
@@ -186,7 +187,7 @@ export default function ProjectsSection() {
   }, [filter]);
 
   return (
-    <section className="px-2 sm:px-4 md:px-6 pt-8 pb-2">
+    <section className="px-2 sm:px-4 md:px-6 pt-8 pb-2 " id="projects">
       <div className="mb-4">
         <Badge>
           <span>🧰</span>

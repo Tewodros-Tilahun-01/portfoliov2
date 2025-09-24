@@ -137,7 +137,7 @@ function InfoCard({
 
 export default function ResumeSection() {
   return (
-    <section className="px-2 sm:px-12 md:px-16 py-10">
+    <section className="px-2 sm:px-12 md:px-16 py-10" id="resume">
       <div className="mb-6">
         <Badge>
           <span>💼</span>

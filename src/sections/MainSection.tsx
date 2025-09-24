@@ -13,20 +13,20 @@ function MainSection() {
         <StatsRow />
       </div>
 
-      <div className="mb-8"></div>
+      <div className="mb-4"></div>
       <div className="pb-8 bg-secondary ">
         <ResumeSection />
       </div>
-      <div className="mb-8"></div>
+      <div className="mb-4"></div>
       <div className="pb-8 bg-secondary ">
         <StackSection />
       </div>
-      <div className="mb-8"></div>
+      <div className="mb-4"></div>
 
       <div className="bg-secondary ">
         <ProjectsSection />
       </div>
-      <div className="mb-8"></div>
+      <div className="mb-4"></div>
 
       <div className="pb-8 bg-secondary ">
         <ContactSection />

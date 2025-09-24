@@ -41,10 +41,17 @@ function ProfileCard({ name, title, avatarUrl }: ProfileCardProps) {
         </div>
 
         <div className="grid grid-cols-2 divide-x divide-primary">
-          <a className="p-5 text-center hover-bg transition-colors" href="#">
+          <a
+            className="p-5 text-center hover-bg transition-colors"
+            target="_blank"
+            href="https://drive.google.com/file/d/1xSeDYIhc_8G59-gOrb_DsHl5zxDJf8HL/view?usp=sharing"
+          >
             Download CV
           </a>
-          <a className="p-5 text-center hover-bg transition-colors" href="#">
+          <a
+            className="p-5 text-center hover-bg transition-colors"
+            href="#contact"
+          >
             Contact Me
           </a>
         </div>

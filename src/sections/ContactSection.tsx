@@ -25,7 +25,7 @@ function InfoCard({
 
 export default function ContactSection() {
   return (
-    <section className="px-2 sm:px-4 md:px-6 py-10">
+    <section className="px-2 sm:px-4 md:px-6 py-10" id="contact">
       <div className="mb-4">
         <span className="inline-flex items-center gap-2 text-lg tracking-wider uppercase bg-[#1a1a1a] border border-custom text-secondary px-3 py-1 rounded-full">
           <span className="text-2xl">✉️</span>

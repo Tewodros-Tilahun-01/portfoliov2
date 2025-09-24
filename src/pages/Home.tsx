@@ -6,9 +6,9 @@ import MainSection from "../sections/MainSection";
 function Home() {
   return (
     <Layout>
-      <div className="grid gap-4 grid-cols-1 md:grid-cols-[88px_1fr] lg:grid-cols-[auto_2fr_5fr] md:px-4">
+      <div className=" relative grid gap-4 grid-cols-1 md:grid-cols-[88px_1fr] lg:grid-cols-[auto_2fr_5fr] md:px-4">
         <Sidebar />
-        <ProfileCard name="Andrew Ryan" title="Data Architect" />
+        <ProfileCard name="Tewodros Tilahun" title="software developer" />
         <MainSection />
       </div>
     </Layout>

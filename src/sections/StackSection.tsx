@@ -54,10 +54,22 @@ const toolStack: Skill[] = [
     color: "#6cc24a",
   },
   {
+    name: "express",
+    percent: 75,
+    icon: <Server className="size-8" />,
+    color: "#ff9900",
+  },
+  {
     name: "PostgreSQL",
     percent: 80,
     icon: <Database className="size-8" />,
     color: "#336791",
+  },
+  {
+    name: "Prisma",
+    percent: 74,
+    icon: <Boxes className="size-8" />,
+    color: "#2d3748",
   },
   {
     name: "MongoDB",
@@ -65,6 +77,7 @@ const toolStack: Skill[] = [
     icon: <Database className="size-8" />,
     color: "#10aa50",
   },
+
   {
     name: "Docker",
     percent: 76,
@@ -77,26 +90,16 @@ const toolStack: Skill[] = [
     icon: <GitBranch className="size-8" />,
     color: "#f05032",
   },
+
   {
-    name: "AWS",
-    percent: 75,
-    icon: <Cloud className="size-8" />,
-    color: "#ff9900",
-  },
-  {
-    name: "Azure",
+    name: "react native",
     percent: 72,
-    icon: <Cloud className="size-8" />,
+    icon: <Atom className="size-8" />,
     color: "#0078d4",
   },
+
   {
-    name: "Prisma",
-    percent: 74,
-    icon: <Boxes className="size-8" />,
-    color: "#2d3748",
-  },
-  {
-    name: "Express",
+    name: "Expo",
     percent: 78,
     icon: <Server className="size-8" />,
     color: "#ffffff",
@@ -214,10 +217,10 @@ function LanguageRow({ name, percent, flag }: Language) {
 
 function StackSection() {
   return (
-    <section className="px-2 sm:px-4 md:px-6 py-2 sm:py-8 md:py-8">
+    <section className="px-2 sm:px-4 md:px-6 py-2 sm:py-8 md:py-8" id="stacks">
       <div className="mt-10">
         <SectionBadge> tech Stack</SectionBadge>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {toolStack.map((s) => (
             <CircularStat key={s.name} {...s} />
           ))}

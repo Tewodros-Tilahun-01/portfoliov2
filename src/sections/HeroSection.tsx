@@ -28,22 +28,23 @@ const slide = {
 function HeroSection() {
   return (
     <motion.section
-      className="p-10 pb-0"
+      className="p-10 pb-0 rounded-r-2xl "
+      id="about"
       variants={container}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
     >
       <motion.p className="text-secondary" variants={fade}>
-        Hello, I'm <span className="text-accent">Lead Data Scientist</span>
+        Hello, I'm <span className="text-accent">software engineer</span>
       </motion.p>
       <motion.h1
-        className="mt-4 text-5xl md:text-6xl font-extrabold leading-tight"
+        className="mt-4 text-5xl md:text-6xl font-extrabold leading-tight capitalize"
         variants={slide}
       >
-        Senior Data Engineer and
+        Full Stack and Mobile app developer
         <span className="mx-2 inline-block rounded-full bg-accent px-3 py-1 text-accent-secondary">
-          Data Scientist
+          React Scientist
         </span>
         Based in
       </motion.h1>
@@ -51,13 +52,13 @@ function HeroSection() {
         className="text-5xl md:text-6xl font-extrabold"
         variants={slide}
       >
-        California, Los Angeles.
+        Addis Abeba
       </motion.h2>
 
       <motion.p className="mt-6 max-w-2xl text-tertiary" variants={slide}>
-        Have worked in a variety of positions, including key developer, solution
-        designer, and data architect. Strong engineering background combined
-        with closely working with business customers.
+        Have worked in a variety of positions, including as frontend and
+        backend. Strong engineering background combined with closely working
+        with business customers.
       </motion.p>
     </motion.section>
   );

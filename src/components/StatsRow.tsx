@@ -5,9 +5,8 @@ interface Stat {
 }
 
 const defaultStats: Stat[] = [
-  { value: "96", label: "Completed", sublabel: "Projects" },
-  { value: "8", label: "Years", sublabel: "of Experience" },
-  { value: "10+", label: "Awards", sublabel: "Winning" },
+  { value: "5", label: "Completed", sublabel: "Projects" },
+  { value: "3", label: "Years", sublabel: "of Experience" },
 ];
 
 function StatsRow({ stats = defaultStats }: { stats?: Stat[] }) {
