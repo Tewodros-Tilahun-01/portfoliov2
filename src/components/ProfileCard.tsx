@@ -1,3 +1,5 @@
+import { FaGithub, FaLinkedin, FaTelegram, FaCode } from "react-icons/fa";
+
 interface ProfileCardProps {
   name: string;
   title: string;
@@ -5,8 +7,31 @@ interface ProfileCardProps {
 }
 
 function ProfileCard({ name, title, avatarUrl }: ProfileCardProps) {
+  const socialLinks = [
+    {
+      name: "GitHub",
+      icon: <FaGithub />,
+      url: "https://github.com/",
+    },
+    {
+      name: "LinkedIn",
+      icon: <FaLinkedin />,
+      url: "https://linkedin.com/",
+    },
+    {
+      name: "Telegram",
+      icon: <FaTelegram />,
+      url: "https://t.me/",
+    },
+    {
+      name: "LeetCode",
+      icon: <FaCode />,
+      url: "https://leetcode.com/",
+    },
+  ];
+
   return (
-    <div className=" lg:sticky lg:top-12 max-h-min">
+    <div className="lg:sticky lg:top-12 max-h-min">
       <div className="sm:rounded-3xl rounded-none bg-secondary ring-1 ring-primary w-full overflow-hidden max-h-min">
         <div className="p-7">
           <div className="sm:rounded-2xl overflow-hidden bg-tertiary h-72 grid place-items-center">
@@ -28,13 +53,17 @@ function ProfileCard({ name, title, avatarUrl }: ProfileCardProps) {
             <h3 className="mt-3 text-2xl font-semibold">{name}</h3>
 
             <div className="mt-5 flex justify-center gap-3">
-              {Array.from({ length: 4 }).map((_, i) => (
-                <button
+              {socialLinks.map((link, i) => (
+                <a
                   key={i}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="size-10 grid place-items-center rounded-full bg-tertiary text-secondary hover:text-primary hover-bg"
+                  title={link.name}
                 >
-                  <span className="text-lg">in</span>
-                </button>
+                  <span className="text-lg">{link.icon}</span>
+                </a>
               ))}
             </div>
           </div>
@@ -44,6 +73,7 @@ function ProfileCard({ name, title, avatarUrl }: ProfileCardProps) {
           <a
             className="p-5 text-center hover-bg transition-colors"
             target="_blank"
+            rel="noopener noreferrer"
             href="https://drive.google.com/file/d/1xSeDYIhc_8G59-gOrb_DsHl5zxDJf8HL/view?usp=sharing"
           >
             Download CV

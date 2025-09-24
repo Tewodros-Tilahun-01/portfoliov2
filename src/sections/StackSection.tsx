@@ -1,17 +1,23 @@
 import { Card } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
 import {
-  Database,
-  Cloud,
-  Atom,
-  Wind,
-  Server,
-  GitBranch,
-  Boxes,
-  BookOpen,
-  Users,
-  Sparkles,
-} from "lucide-react";
+  FaReact,
+  FaServer,
+  FaGitAlt,
+  FaBox,
+  FaBookOpen,
+  FaUsers,
+  FaStar,
+} from "react-icons/fa";
+import {
+  SiNextdotjs,
+  SiExpress,
+  SiMongodb,
+  SiPostgresql,
+  SiDocker,
+  SiExpo,
+  SiTailwindcss,
+} from "react-icons/si";
 import type { ReactNode } from "react";
 
 type Skill = {
@@ -32,85 +38,82 @@ const toolStack: Skill[] = [
   {
     name: "React",
     percent: 90,
-    icon: <Atom className="size-8" />,
+    icon: <FaReact size={32} />,
     color: "#61dafb",
   },
   {
     name: "Next.js",
     percent: 85,
-    icon: <Server className="size-8" />,
+    icon: <SiNextdotjs size={32} />,
     color: "#ffffff",
   },
   {
     name: "Tailwind",
     percent: 88,
-    icon: <Wind className="size-8" />,
+    icon: <SiTailwindcss size={32} />,
     color: "#38bdf8",
   },
   {
     name: "Node.js",
     percent: 82,
-    icon: <Server className="size-8" />,
+    icon: <FaServer size={32} />,
     color: "#6cc24a",
   },
   {
     name: "express",
     percent: 75,
-    icon: <Server className="size-8" />,
+    icon: <SiExpress size={32} />,
     color: "#ff9900",
   },
   {
     name: "PostgreSQL",
     percent: 80,
-    icon: <Database className="size-8" />,
+    icon: <SiPostgresql size={32} />,
     color: "#336791",
   },
   {
     name: "Prisma",
     percent: 74,
-    icon: <Boxes className="size-8" />,
+    icon: <FaBox size={32} />,
     color: "#2d3748",
   },
   {
     name: "MongoDB",
     percent: 78,
-    icon: <Database className="size-8" />,
+    icon: <SiMongodb size={32} />,
     color: "#10aa50",
   },
-
   {
     name: "Docker",
     percent: 76,
-    icon: <Boxes className="size-8" />,
+    icon: <SiDocker size={32} />,
     color: "#2496ed",
   },
   {
     name: "Git",
     percent: 84,
-    icon: <GitBranch className="size-8" />,
+    icon: <FaGitAlt size={32} />,
     color: "#f05032",
   },
-
   {
     name: "react native",
     percent: 72,
-    icon: <Atom className="size-8" />,
+    icon: <FaReact size={32} />,
     color: "#0078d4",
   },
-
   {
     name: "Expo",
     percent: 78,
-    icon: <Server className="size-8" />,
+    icon: <SiExpo size={32} />,
     color: "#ffffff",
   },
 ];
 
 const generalSkills: Skill[] = [
-  { name: "Analytical", percent: 90, icon: <BookOpen className="size-4" /> },
-  { name: "Teamwork", percent: 72, icon: <Users className="size-4" /> },
-  { name: "Leadership", percent: 65, icon: <Sparkles className="size-4" /> },
-  { name: "Learning", percent: 82, icon: <BookOpen className="size-4" /> },
+  { name: "Analytical", percent: 90, icon: <FaBookOpen size={16} /> },
+  { name: "Teamwork", percent: 72, icon: <FaUsers size={16} /> },
+  { name: "Leadership", percent: 65, icon: <FaStar size={16} /> },
+  { name: "Learning", percent: 82, icon: <FaBookOpen size={16} /> },
 ];
 
 const languages: Language[] = [
@@ -125,16 +128,16 @@ function CircularStat({ name, percent, icon, color }: Skill) {
     }deg, transparent 0)`,
   } as const;
   return (
-    <Card className="aspect-square p-0  shadow-lg">
+    <Card className="aspect-square p-0 shadow-lg">
       <div className="h-full w-full flex flex-col items-center justify-center gap-1">
         <div className="relative size-20">
-          <div className="absolute inset-0 rounded-full " style={ring} />
+          <div className="absolute inset-0 rounded-full" style={ring} />
           <div
-            className="absolute inset-1 rounded-full bg-tertiary  flex flex-col justify-center items-center "
+            className="absolute inset-1 rounded-full bg-tertiary flex flex-col justify-center items-center"
             style={{ color: color }}
           >
             {icon}
-            <div className="  text-sm text-primary">{percent}%</div>
+            <div className="text-sm text-primary">{percent}%</div>
           </div>
         </div>
         <div className="text-sm text-primary sm:mt-2">{name}</div>
@@ -165,7 +168,7 @@ function SmallCircular({ name, percent, icon }: Skill) {
 
 function SectionBadge({ children }: { children: string }) {
   return (
-    <div className="mb-1 flex items-center gap-3 ">
+    <div className="mb-1 flex items-center gap-3">
       <Badge>
         <span>⚙️</span>
         <span className="text-xl uppercase">{children}</span>
@@ -200,9 +203,9 @@ function DotsProgress({
 
 function LanguageRow({ name, percent, flag }: Language) {
   return (
-    <div className="grid grid-cols-4  place-content-center px-2 gap-8 py-1 w-full">
+    <div className="grid grid-cols-4 place-content-center px-2 gap-8 py-1 w-full">
       <div className="flex items-center gap-4">
-        <div className="grid place-items-center size-10 rounded-xl  text-lg">
+        <div className="grid place-items-center size-10 rounded-xl text-lg">
           <span aria-hidden>{flag}</span>
         </div>
         <div className="text-primary">{name}</div>
@@ -219,7 +222,7 @@ function StackSection() {
   return (
     <section className="px-2 sm:px-4 md:px-6 py-2 sm:py-8 md:py-8" id="stacks">
       <div className="mt-10">
-        <SectionBadge> tech Stack</SectionBadge>
+        <SectionBadge>tech Stack</SectionBadge>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {toolStack.map((s) => (
             <CircularStat key={s.name} {...s} />
@@ -238,7 +241,7 @@ function StackSection() {
 
       <div className="mt-10">
         <SectionBadge>Languages</SectionBadge>
-        <Card className=" bg-transparent border-none">
+        <Card className="bg-transparent border-none">
           {languages.map((l) => (
             <LanguageRow key={l.name} {...l} />
           ))}
