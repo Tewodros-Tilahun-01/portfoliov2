@@ -4,6 +4,13 @@ html {
   scroll-behavior: smooth;
 }
 
+aside {
+  z-index: 100; /* Ensure the aside has a higher stacking context */
+}
+
+.group > span {
+  z-index: 101; /* Increase tooltip z-index to appear above the sticky div */
+}
 :root {
   /* Light theme colors */
   --bg-primary: #ffffff;

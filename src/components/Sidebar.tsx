@@ -17,11 +17,11 @@ function Sidebar() {
             <a
               aria-label={item.label}
               href={item.id}
-              className="size-12 grid place-items-center rounded-full group-hover:bg-green-400 text-secondary  transition-colors"
+              className="size-12 grid place-items-center rounded-full  text-secondary  transition-colors"
             >
-              <span className="">{item.icon}</span>
+              <span className="group-hover:text-green-400">{item.icon}</span>
             </a>
-            <span className=" z-10 absolute left-full ml-2 top-1/2 -translate-y-1/2  border border-custom text-white text-sm px-2 py-1 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+            <span className=" z-10 absolute left-full ml-2 top-1/2 -translate-y-1/2  border border-custom group-hover:bg-green-300 text-black text-sm px-2 py-1 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none rounded-2xl">
               {item.label}
             </span>
           </div>
