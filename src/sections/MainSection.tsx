@@ -1,6 +1,7 @@
 import StatsRow from "../components/StatsRow";
 import HeroSection from "./HeroSection";
 import ProjectsSection from "./ProjectsSection";
+import ResumeSection from "./ResumeSection";
 import StackSection from "./StackSection";
 
 function MainSection() {
@@ -17,8 +18,13 @@ function MainSection() {
       </div>
       <div className="mb-8"></div>
 
-      <div className="pb-8 bg-secondary ">
+      <div className="bg-secondary ">
         <ProjectsSection />
+      </div>
+      <div className="mb-8"></div>
+
+      <div className="pb-8 bg-secondary ">
+        <ResumeSection />
       </div>
     </div>
   );

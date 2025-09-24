@@ -186,7 +186,7 @@ export default function ProjectsSection() {
   }, [filter]);
 
   return (
-    <section className="px-2 sm:px-4 md:px-6 py-8">
+    <section className="px-2 sm:px-4 md:px-6 pt-8 pb-2">
       <div className="mb-4">
         <Badge>
           <span>🧰</span>
@@ -208,7 +208,7 @@ export default function ProjectsSection() {
         ))}
       </div>
 
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2  gap-x-10 gap-y-8">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2  gap-x-10 gap-y-4">
         {filtered.map((p, i) => (
           <div
             key={p.id}
