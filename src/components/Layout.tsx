@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import LazyCursor from "./LazyCursor";
+import MobileNav from "./MobileNav";
 
 interface LayoutProps {
   children: ReactNode;
@@ -7,7 +8,7 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="min-h-dvh relative text-primary cursor-crosshair">
+    <div className="min-h-dvh relative text-primary  cursor-crosshair">
       <video
         className="fixed top-0 left-0 w-full h-full opacity-100  object-cover"
         autoPlay
@@ -19,6 +20,7 @@ export default function Layout({ children }: LayoutProps) {
         Your browser does not support the video tag.
       </video>
       {/* <div className="absolute inset-0 bg-neutral-900/60"></div> */}
+      <MobileNav />
       <div className="relative z-10 mx-auto sm:px-12 md:px-2 lg:px-2 py-12 md:pb-8 pb-0 sm:container md:container container lg:max-w-full">
         {children}
       </div>
