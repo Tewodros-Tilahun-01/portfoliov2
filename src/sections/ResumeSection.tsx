@@ -25,7 +25,7 @@ const experience: TimelineItem[] = [
     location: "remote",
     range: "2023 – 2024",
     summary:
-      "translates designs into functional, responsive user interfaces using HTML, CSS, and JavaScript, often leveraging frameworks like React or Angular to build interactive web pages and applications ",
+      "translates designs into functional, responsive user interfaces using HTML, CSS, and JavaScript, often leveraging frameworks like React to build interactive web pages and applications ",
   },
 ];
 
