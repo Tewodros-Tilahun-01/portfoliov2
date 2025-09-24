@@ -32,7 +32,7 @@ export default function ContactSection() {
           <span>Contact</span>
         </span>
       </div>
-      <h2 className="text-4xl md:text-5xl font-extrabold text-primary">
+      <h2 className="text-2xl md:text-3xl lg:text-5xl font-extrabold text-primary">
         Let's Get in Touch!
       </h2>
 
@@ -56,8 +56,9 @@ export default function ContactSection() {
         </div>
       </div>
 
-      <h3 className="mt-12 text-3xl md:text-4xl font-extrabold text-primary">
-        Let's make your project brilliant!
+      <h3 className="mt-12 text-2xl md:text-3xl lg:text-5xl font-extrabold text-primary">
+        Let's make your project
+        <br /> brilliant!
       </h3>
 
       <form className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-5">

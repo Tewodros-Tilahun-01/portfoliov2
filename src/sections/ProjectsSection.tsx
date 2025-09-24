@@ -187,14 +187,14 @@ export default function ProjectsSection() {
   }, [filter]);
 
   return (
-    <section className="px-2 sm:px-4 md:px-6 pt-8 pb-2 " id="projects">
+    <section className="px-4 sm:px-12 md:px-16 py-4 " id="projects">
       <div className="mb-4">
         <Badge>
           <span>🧰</span>
           <span>Projects</span>
         </Badge>
       </div>
-      <h2 className="text-4xl md:text-3xl font-extrabold text-primary uppercase">
+      <h2 className="text-2xl md:text-3xl lg:text-5xl font-extrabold text-primary uppercase">
         Explore my projects
       </h2>
 
