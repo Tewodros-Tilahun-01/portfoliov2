@@ -8,7 +8,11 @@ function Home() {
     <Layout>
       <div className=" relative grid gap-4 grid-cols-1 md:grid-cols-[88px_1fr] lg:grid-cols-[auto_2fr_5fr] md:px-4">
         <Sidebar />
-        <ProfileCard name="Tewodros Tilahun" title="software developer" />
+        <ProfileCard
+          name="Tewodros Tilahun"
+          title="software developer"
+          avatarUrl="./assets/avater.jpg"
+        />
         <MainSection />
       </div>
     </Layout>

@@ -28,7 +28,7 @@ function MainSection() {
       </div>
       <div className="mb-4"></div>
 
-      <div className="pb-8 bg-secondary ">
+      <div className=" bg-secondary ">
         <ContactSection />
       </div>
     </div>
