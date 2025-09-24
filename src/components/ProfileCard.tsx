@@ -11,22 +11,22 @@ function ProfileCard({ name, title, avatarUrl }: ProfileCardProps) {
     {
       name: "GitHub",
       icon: <FaGithub />,
-      url: "https://github.com/",
+      url: "https://github.com/tewodros-tilahun-01",
     },
     {
       name: "LinkedIn",
       icon: <FaLinkedin />,
-      url: "https://linkedin.com/",
+      url: "https://www.linkedin.com/in/tewodros--tilahun/",
     },
     {
       name: "Telegram",
       icon: <FaTelegram />,
-      url: "https://t.me/",
+      url: "https://t.me/teraa3",
     },
     {
       name: "LeetCode",
       icon: <FaCode />,
-      url: "https://leetcode.com/",
+      url: "https://leetcode.com/u/teddylet/",
     },
   ];
 
