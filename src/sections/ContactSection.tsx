@@ -28,7 +28,7 @@ export default function ContactSection() {
     <section className="px-2 sm:px-4 md:px-6 py-10">
       <div className="mb-4">
         <span className="inline-flex items-center gap-2 text-lg tracking-wider uppercase bg-[#1a1a1a] border border-custom text-secondary px-3 py-1 rounded-full">
-          <span>✉️</span>
+          <span className="text-2xl">✉️</span>
           <span>Contact</span>
         </span>
       </div>
@@ -38,18 +38,18 @@ export default function ContactSection() {
 
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
         <InfoCard
-          icon={<Phone className="size-5" />}
+          icon={<Phone className="size-8" />}
           label="Phone"
           value="+251 987 130 441"
         />
         <InfoCard
-          icon={<Mail className="size-5" />}
+          icon={<Mail className="size-8" />}
           label="Email"
           value="teddytilahun01@gamil.com"
         />
         <div className="md:col-span-2">
           <InfoCard
-            icon={<MapPinned className="size-5" />}
+            icon={<MapPinned className="size-8" />}
             label="Address"
             value="Addis Ababa, Ethiopia"
           />

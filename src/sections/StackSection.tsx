@@ -124,7 +124,7 @@ function CircularStat({ name, percent, icon, color }: Skill) {
   return (
     <Card className="aspect-square p-0  shadow-lg">
       <div className="h-full w-full flex flex-col items-center justify-center gap-1">
-        <div className="relative size-22">
+        <div className="relative size-20">
           <div className="absolute inset-0 rounded-full " style={ring} />
           <div
             className="absolute inset-1 rounded-full bg-tertiary  flex flex-col justify-center items-center "
